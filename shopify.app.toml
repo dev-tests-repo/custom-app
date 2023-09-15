@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "orders-custom-app"
+client_id = "42cb053df9619e22bda6fd5715b79e10"
+application_url = "https://breast-nv-tions-organic.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders"
+
+[auth]
+redirect_urls = [
+  "https://breast-nv-tions-organic.trycloudflare.com/auth/callback",
+  "https://breast-nv-tions-organic.trycloudflare.com/auth/shopify/callback",
+  "https://breast-nv-tions-organic.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "ds-test-sections.myshopify.com"
